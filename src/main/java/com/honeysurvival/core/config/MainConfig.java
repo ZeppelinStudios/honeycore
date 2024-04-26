@@ -11,6 +11,9 @@ public class MainConfig extends BaseConfig {
         super(file, defaultName, logger);
     }
 
+    public String getReportStaffPermission() {
+        return configuration.getString("reports.staff-permission");
+    }
 
     public static MainConfig createDefault(Plugin plugin) {
         return new MainConfig(new File(plugin.getDataFolder(), "config.yml"), "/config/config.yml", plugin.getLogger());

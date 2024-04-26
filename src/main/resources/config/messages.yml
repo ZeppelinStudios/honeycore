@@ -6,8 +6,6 @@ report-no-target: "&cInvalid Target: &f%target_name%"
 report-started: "&aReport Session Started! Please write the reason for your report."
 report-confirm: "&aReport reason collected. Write /report-confirm to send the report to staff, or /report-cancel to cancel."
 # report-sent has extra placeholders: %report_id% %report_reason%
-report-sent: "&aYour report was sent. %id%"
-report-cancelled: "&cReport cancelled."
 report-duplicate: "&cYou are already creating a report. Cancel it using /report-cancel"
 report-help:
   - "&8&m------- &6HoneySurvival Reports &8&m--------"
@@ -15,4 +13,23 @@ report-help:
   - "&8- &f/report confirm"
   - "&8- &f/report cancel"
   - "&8&m------- &6HoneySurvival Reports &8&m--------"
+report-ready:
+  - "&8&m------- &6Your Report &8&m--------"
+  - "&8- &7Reported User: &c%target_name%"
+  - "&8- &7Reason: &c%report_reason%"
+  - "&8- &7Report-ID: &c%report_id%"
+report-confirm-action: "<dark_gray>- <green>Confirm Report"
+report-cancel-action: "<dark_gray>- <red>Cancel Report"
+report-bottom: "&8&m------- &6Your Report &8&m--------"
+report-received-staff:
+  - "&8&m------- &cReport Received &8&m--------"
+  - "&e%player_name% &7reported user: &c&l%target_name%"
+  - "&8- &7Reason: &f%report_reason%"
+  - "&8- &7Report-ID: &f%report_id%"
+  - "&8&m------- &cReport Panel &8&m--------"
+report-teleport: "<yellow><bold>- Teleport To Target"
+report-close-positive: "<green><bold>- Close Report: Positive"
+report-close-negative: "<red><bold>- Close Report: Negative"
+report-panel-bottom: "&8&m------- &cReport Panel &8&m--------"
+
 report-confirm-failed: "&cYou cannot confirm your report as it's not finalized. You are either missing the reason, or you haven't started making the report. Make it using /report create"

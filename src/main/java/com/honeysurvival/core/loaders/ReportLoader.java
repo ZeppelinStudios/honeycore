@@ -32,6 +32,7 @@ public class ReportLoader implements CoreLoader<Report> {
     @Override
     public void save(Report report) {
         reportDataConfig.getConfig().set("reports." + report.getUuid(), report.toString());
+        reportDataConfig.save();
     }
 
     @Override
