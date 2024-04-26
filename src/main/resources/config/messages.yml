@@ -1,0 +1,18 @@
+# Universal Placeholders
+# %player_name% - where a player is defined
+# %target_name% - where a target is defined
+
+report-no-target: "&cInvalid Target: &f%target_name%"
+report-started: "&aReport Session Started! Please write the reason for your report."
+report-confirm: "&aReport reason collected. Write /report-confirm to send the report to staff, or /report-cancel to cancel."
+# report-sent has extra placeholders: %report_id% %report_reason%
+report-sent: "&aYour report was sent. %id%"
+report-cancelled: "&cReport cancelled."
+report-duplicate: "&cYou are already creating a report. Cancel it using /report-cancel"
+report-help:
+  - "&8&m------- &6HoneySurvival Reports &8&m--------"
+  - "&8- &f/report create"
+  - "&8- &f/report confirm"
+  - "&8- &f/report cancel"
+  - "&8&m------- &6HoneySurvival Reports &8&m--------"
+report-confirm-failed: "&cYou cannot confirm your report as it's not finalized. You are either missing the reason, or you haven't started making the report. Make it using /report create"

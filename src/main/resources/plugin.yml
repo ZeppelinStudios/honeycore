@@ -1,0 +1,6 @@
+name: honeysurvival-core
+version: '${version}'
+main: com.honeysurvival.core.CorePlugin
+api-version: '1.20'
+author: Xemu
+description: Core Modules for Honey Survival, Created by
