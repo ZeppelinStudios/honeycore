@@ -37,18 +37,17 @@ public class ReportLoader implements CoreLoader<Report> {
 
     @Override
     public Optional<Report> load(String uuid) {
-        if (UUID.fromString(uuid) != null) {
+        if (UUID.fromString(uuid)!= null) {
             String data = reportDataConfig.getConfig().getString("reports." + uuid);
 
-            String[] parts = data.split(",");
+            String[] parts = data.split(";");
 
-            UUID uniqueId = UUID.fromString(parts[0]);
-            UUID reporter = UUID.fromString(parts[1]);
-            UUID reported = UUID.fromString(parts[2]);
-            String reason = parts[3];
-            boolean open = Boolean.parseBoolean(parts[4]);
+            UUID reporter = UUID.fromString(parts[0]);
+            UUID reported = UUID.fromString(parts[1]);
+            String reason = parts[2];
+            boolean open = Boolean.parseBoolean(parts[3]);
 
-            return Optional.of(new Report(uniqueId, reporter, reported, reason, open));
+            return Optional.of(new Report(UUID.fromString(uuid), reporter, reported, reason, open));
         }
         return Optional.empty();
     }

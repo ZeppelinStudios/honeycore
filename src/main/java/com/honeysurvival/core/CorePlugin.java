@@ -8,6 +8,7 @@ import com.honeysurvival.core.config.MainConfig;
 import com.honeysurvival.core.config.MessagesConfig;
 import com.honeysurvival.core.config.ReportDataConfig;
 import com.honeysurvival.core.integration.integrations.CMIBaseIntegration;
+import com.honeysurvival.core.loaders.MineClusterLoader;
 import com.honeysurvival.core.loaders.ReportLoader;
 import dev.jorel.commandapi.CommandAPI;
 import dev.jorel.commandapi.CommandAPIBukkitConfig;
@@ -27,11 +28,17 @@ public final class CorePlugin extends JavaPlugin {
         CommandAPI.onLoad(new CommandAPIBukkitConfig(this).silentLogs(true));
 
         this.componentManager = ComponentManager.register(this, List.of(
+                /* Configs */
                 MainConfig.createDefault(this),
                 MessagesConfig.createDefault(this),
                 ReportDataConfig.createDefault(this),
-                new IntegrationComponent(this),
+
+                /* Loaders */
                 new ReportLoader(this),
+                new MineClusterLoader(),
+
+                /* Components */
+                new IntegrationComponent(this),
                 new ReportComponent(this)
         ));
 

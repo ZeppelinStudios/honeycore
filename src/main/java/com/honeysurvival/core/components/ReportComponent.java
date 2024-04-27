@@ -62,24 +62,24 @@ public class ReportComponent extends CommandComponent implements Listener {
                     if (positive) {
                         plugin.getMessages().getConfig().getStringList("report-status-positive").forEach(msg -> {
                             String m = new CoreMessage(msg)
-                                    .defaultPlaceholders(executor.getName(), target.getName())
-                                    .placeholder("%report_reason%", report.getReason())
-                                    .placeholder("%report_id%", report.getUuid())
-                                    .color()
-                                    .hex()
-                                    .toString();
+                                        .defaultPlaceholders(executor.getName(), target.getName())
+                                        .placeholder("%report_reason%", report.getReason())
+                                        .placeholder("%report_id%", report.getUuid())
+                                        .color()
+                                        .hex()
+                                        .toString();
 
                             player.sendMessage(m);
                         });
                     } else {
                         plugin.getMessages().getConfig().getStringList("report-status-negative").forEach(msg -> {
                             String m = new CoreMessage(msg)
-                                    .defaultPlaceholders(executor.getName(), target.getName())
-                                    .placeholder("%report_reason%", report.getReason())
-                                    .placeholder("%report_id%", report.getUuid())
-                                    .color()
-                                    .hex()
-                                    .toString();
+                                        .defaultPlaceholders(executor.getName(), target.getName())
+                                        .placeholder("%report_reason%", report.getReason())
+                                        .placeholder("%report_id%", report.getUuid())
+                                        .color()
+                                        .hex()
+                                        .toString();
 
                             player.sendMessage(m);
                         });

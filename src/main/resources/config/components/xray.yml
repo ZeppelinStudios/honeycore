@@ -1,0 +1,7 @@
+materials:
+  - DIAMOND_ORE
+
+notification-toggled: "&a&lYou have toggled X-Ray Notifications on."
+
+permission-required: "honeycore.xray.alert"
+
